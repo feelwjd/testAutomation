@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Automation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='recorder.js') }}"></script>
+</head>
+<body>
+    <h1>Test Automation Platform</h1>
+
+    <!-- URL 입력 및 버튼 -->
+    <input type="text" id="url" placeholder="Enter URL (e.g., https://www.naver.com)">
+    <button onclick="openURL()">Open URL</button>
+    <button onclick="startRecording()">Start Recording</button>
+    <button onclick="saveScenario()">Save Scenario</button>
+    <button onclick="playScenario()">Play Scenario</button>
+    
+    <!-- 상태 메시지 -->
+    <div id="status"></div>
+
+    <!-- Iframe을 통해 외부 페이지 표시 -->
+    <iframe id="actionFrame" style="width: 100%; height: 600px; border: 1px solid #ccc;"></iframe>
+</body>
+</html>
